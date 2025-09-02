@@ -22,12 +22,12 @@ public class EmaillistController {
 	public String list(Model model) {
 		List<EmailVo> list = emailRepository.findAll();
 		model.addAttribute("list",list);
-		return "/WEB-INF/views/list.jsp";
+		return "list";
 	}
 	
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String add() {
-		return "/WEB-INF/views/add.jsp";
+		return "add";
 	}
 	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
