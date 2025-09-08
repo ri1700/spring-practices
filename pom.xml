@@ -25,6 +25,7 @@
 		<module>hellospring</module>
 		<module>emaillist03</module>
 		<module>log.ex</module>
+		<module>aop</module>
 	</modules>
 	
 </project>
