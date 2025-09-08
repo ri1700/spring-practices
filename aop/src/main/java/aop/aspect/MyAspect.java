@@ -26,9 +26,9 @@ public class MyAspect {
 		System.out.println("-- AfterReturning Advice --");
 	}
 	
-	@AfterThrowing(value = "execution(* *..*.ProductService.find(..))",throwing = "ex")	// * *..* = aop.domain.Product.aop
-	public void adviceAfterThrowing(Throwable ex) {												// .. = String
-		System.out.println("-- AfterThrowing[" + ex.getMessage() + "] Advice --");				// 글자 수 줄이기
-	}
+	@AfterThrowing(value = "execution(* *..*.ProductService.find(..))",throwing = "ex")			// * = aop.domain.Product 
+	public void adviceAfterThrowing(Throwable ex) {												// *..* = aop.service
+		System.out.println("-- AfterThrowing[" + ex.getMessage() + "] Advice --");				// .. = String
+	}																							// 글자 수 줄이기
 	
 }
