@@ -1,0 +1,34 @@
+package aop.aspect;
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class MyAspect {
+	
+	@Before("execution(public aop.domain.Product aop.service.ProductService.find(String))	")
+	public void adviceBefore() {
+		System.out.println("-- Before Advice --");
+	}
+	
+	@After("execution(aop.domain.Product aop.service.ProductService.find(String))	")
+	public void adviceAfter() {
+		System.out.println("-- After Advice --");
+	}
+	
+	@AfterReturning("execution(* aop.service.ProductService.find(String))	")
+	public void adviceAfterReturning() {
+		System.out.println("-- AfterReturning Advice --");
+	}
+	
+	@AfterThrowing(value = "execution(* *..*.ProductService.find(..))",throwing = "ex")	// * *..* = aop.domain.Product.aop
+	public void adviceAfterThrowing(Throwable ex) {												// .. = String
+		System.out.println("-- AfterThrowing[" + ex.getMessage() + "] Advice --");				// 글자 수 줄이기
+	}
+	
+}
