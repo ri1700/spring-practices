@@ -1,0 +1,8 @@
+@charset "UTF-8";
+*       { margin:0; padding:0 }
+body    { font:0.75em "맑은 고딕", 돋움, 굴림 }
+h1      { height: 70px; line-height:70px; margin-left:10px; color:#79B30B }
+#languages          { margin: 20px 10px }
+#languages a        { display: inline-block; border: #111 2px solid; border-radius: 4px 0 0 4px; line-height:20px; height:20px; padding: 0 5px; color: grey; text-decoration:none }
+#languages a + a    { border-radius: 0 4px 4px 0 }
+#languages a.active { color:#eee; background-color:#111; font-weight: bold }
