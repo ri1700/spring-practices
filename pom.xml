@@ -20,12 +20,13 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+		
 	<modules>
 		<module>hellospring</module>
 		<module>emaillist03</module>
-		<module>log.ex</module>
+		<module>logex</module>
 		<module>aop</module>
+		<module>fileupload</module>
+		<module>locale</module>
 	</modules>
-	
 </project>
