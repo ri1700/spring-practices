@@ -28,5 +28,6 @@
 		<module>aop</module>
 		<module>fileupload</module>
 		<module>locale</module>
+		<module>bean-wiring</module>
 	</modules>
 </project>
