@@ -3,7 +3,7 @@ package soundsystem;
 import org.springframework.stereotype.Component;
 
 @Component
-public class highSchoolRapper2Final implements CompactDisc {
+public class HighSchoolRapper2Final implements CompactDisc {
 	
 	private final static String artist = "김하온";
 	private final static String title = "붕붕";
